@@ -65,7 +65,8 @@ final class StudioModel: ObservableObject {
                 throw LiveWallError.invalidRange
             }
 
-            let asset = AVURLAsset(url: picked.url)
+                       let asset = AVURLAsset(url: picked.url)
+            let duration = try await asset.load(.duration).seconds
             let duration = try await asset.load(.duration).seconds
             guard duration > 0.2 else { throw LiveWallError.invalidRange }
 
