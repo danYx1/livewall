@@ -1,5 +1,5 @@
 import Foundation
-import PhotosUI
+import CoreTransferable
 import UniformTypeIdentifiers
 
 /// Видео, выбранное через PhotosPicker (копируется во временную папку).
